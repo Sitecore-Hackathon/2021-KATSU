@@ -14,7 +14,7 @@ This solution tries to enhance SXA by enabling the content editors and the marke
    - Some sites needs time to be built
 	   - Content authors and marketers can save time by using a pre-built sites that suits their needs with a theme that suits their needs.
 # Documentation
- [Documentation File](docs/readme.md) 
+ [Documentation File](docs/README.md) 
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
