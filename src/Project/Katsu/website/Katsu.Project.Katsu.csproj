@@ -52,4 +52,12 @@
     <PackageReference Include="Sitecore.Mvc" Version="10.1.0" />
     <PackageReference Include="Sitecore.Mvc.Analytics" Version="10.1.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="sitecore\shell\Applications\Media\SitesBrowser\SitesBrowser.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sitecore\shell\Applications\Media\SitesBrowser\SitesBrowser.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

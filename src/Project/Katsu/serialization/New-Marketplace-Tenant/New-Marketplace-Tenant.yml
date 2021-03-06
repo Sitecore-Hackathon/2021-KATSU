@@ -40,13 +40,13 @@ SharedFields:
     		$parameters += @{ Name = "siteTemplate"; Options = $siteTemplates; Title = [Sitecore.Globalization.Translate]::Text("SiteTemplate"); Tab = [Sitecore.Globalization.Translate]::Text([Katsu.Foundation.Scaffolding.Texts]::Marketplace) }
     		$result = Read-Variable -Title "Choose option" -Description "Choose the right option." -Width 500 -Height 600 -Parameters $parameters
     
-    		$selectedSiteTemplate = $siteTemplate.Split('|')[0]
-    		$tenantName = $siteTemplate.Split('|')[1]
-    		
-            if ($result -ne "ok") {
+    		if ($result -ne "ok") {
                 Close-Window
                 Exit
             }
+    		
+    		$selectedSiteTemplate = $siteTemplate.Split('|')[0]
+    		$tenantName = $siteTemplate.Split('|')[1]		      
     		
     		Install-Package -Path $selectedSiteTemplate -InstallMode Merge -MergeMode Merge
     		$path = -join("master:\sitecore\content\", $tenantName)
@@ -89,11 +89,11 @@ Languages:
       Value: 20160627T082448Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0d914ce9-7fdc-468e-8858-7b2165b011fd"
+      Value: "ebd79ab4-b9a1-440a-9ccb-d96eaaf84bd2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210306T163503Z
+      Value: 20210306T175122Z

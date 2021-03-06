@@ -15,6 +15,11 @@
                 "name": "Marketplace Tenant",
                 "path": "/sitecore/system/Modules/PowerShell/Script Library/SXA/SXA - Scaffolding/Content Editor/Insert Item/Marketplace Tenant",
                 "database": "master"
+            },
+            {
+                "name": "Sites Browser",
+                "path": "/sitecore/layout/Layouts/Media/Site browser",
+                "database": "core"
             }
         ]
     }
