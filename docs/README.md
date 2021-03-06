@@ -18,14 +18,14 @@ On the **Sitecore Launchpad**, click **Control Panel**, **Install a package**. T
 
 # Using the module
 1. From the content editor , right click on content, insert, Marketplace Tenant
-![Step 1](docs/images/1.png?raw=true "Step 1")
+![Step 1](images/1.png?raw=true "Step 1")
 2. Fill the new Site name and pick the template
-![Step 2](docs/images/2png?raw=true "Step 2")
+![Step 2](images/2png?raw=true "Step 2")
 3. Wait for the scripts to finish executing 
-![Step 3](docs/images/3.png?raw=true "Step 3")
-![Step 4](docs/images/4.png?raw=true "Step 4")
+![Step 3](images/3.png?raw=true "Step 3")
+![Step 4](images/4.png?raw=true "Step 4")
 4. As you can see now you have a new Tenant and a site which is fully editable 
-![Step 5](docs/images/5.png?raw=true "Step 5")
-![Step 6](docs/images/6.png?raw=true "Step 6")
+![Step 5](images/5.png?raw=true "Step 5")
+![Step 6](images/6.png?raw=true "Step 6")
 
 # Video
