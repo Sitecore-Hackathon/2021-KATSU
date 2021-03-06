@@ -1,95 +1,75 @@
-<img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
-A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
+![KATSU](https://media1.tenor.com/images/c862016315823b07947d097f99078b54/tenor.gif?itemid=15849113)
+## Team name
+KATSU
 
-![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg) [![Helix Check](https://github.com/muso31/Helixbase/workflows/Helix%20Check/badge.svg)](https://github.com/muso31/Helixbase/actions?query=workflow%3A%22Helix+Check%22) [![GitHub Stars](https://img.shields.io/github/stars/muso31/helixbase?label=GitHub%20Stars)](https://github.com/muso31/Helixbase/stargazers)
+## Category
+The best enhancement to SXA
 
-#### Features include:
+## Description
+This solution tries to enhance SXA by enabling the content editors and the marketers to create a new microsite by installing them from a marketplace that includes a wide variety of pre-built SXA microsites.
 
-* Glass Mapper v5 - with fluent configuration and automated mapping registration
-* Sitecore Content Serialization (SCS)
-* Sitecore 10.1 ready
-* Pre compiled Razor views
-* Bootstrap v4
-* Native dependency injection with auto controller registration
-* A sample hero banner feature and sample site project for demonstration
-* Generic content repositories (by Rendering, Item Context, or Glass Content)
-* Version trimming rules engine - Items limited to 10 versions by default
-* Search Templates computed index field - find all items from an index by any templates they implement
-* Non admin Item Unlock
-* Auto unlocks items when a user is deleted
-* Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
-* Fast ([see benchmark](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
-* [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
-* [Helix Check](https://github.com/marketplace/actions/helix-check) GitHub Action
+  - Module Purpose
+  - Lack of sources for pre-built sites for Sitecore
+    - In our solution, the users will be able to upload and download pre-built sites to be available in one place (Marketplace) which, in turn, gives programmers new opportunities and scope to work using Sitecore.
+   - Some microsites needs time to be built
+	   - Content authors and marketers can save time by using a pre-built sites that suits their needs with a theme that suits their needs.
 
-## Setup Instructions
-*Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
+_You can alternately paste a [link here](#docs) to a document within this repo containing the description._
 
-1. Install [Sitecore Experience Platform 10.1](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/101/Sitecore_Experience_Platform_101.aspx)
-2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/101/developer-tools/en/sitecore-management-services.html), documentation [here](https://doc.sitecore.com/developers/101/developer-tools/en/sitecore-command-line-interface.html)
-3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI/3x/Sitecore_CLI_300.aspx) and push Sitecore items `dotnet sitecore ser push`
+## Video link
+⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-#### Using Helix Base:
-Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
-
-* View [HeroService.cs](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/website/Services/HeroService.cs) for examples of retrieving Sitecore items using the content API and the search API.
-* View [Register routes](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/website/Routes/RegisterRoutes.cs) for an example of how to register a route.
-
-To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
-
-In the security editor you can assign non admin Item Unlock permissions.
-
-If you do not require a feature you can easily delete it.
-
-### Renaming Solution / Projects
-To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run [rename.ps1](https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1) -ProjectName [NewProjectName]'. 
-
-## Build
-
-Helix Base uses [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline) and pre-configures a number of features.
-
-* Content files from all modules are included in the publish
-* Sitecore assemblies are excluded from publish, reducing the package filesize
-
-Local publishing:
-
-* Fast publish-on-build of the Local publish profile. This only adds a few seconds and won't recycle your app pool unless you change code. It even runs your debug Web.config transform!
-* Old assemblies (Helixbase.*.dll) are automatically removed
-
-CI/CD publishing:
-
-* Serialization files are automatically included into App_Data\serialization using the 'package' publish profile.
-
-Azure DevOps:
-
-* If you push this repository to Azure DevOps, then in Build Pipelines choose [New build pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2), it will automatically pick up the included [azure-pipelines.yml](https://github.com/muso31/Helixbase/blob/master/azure-pipelines.yml) file and create an example build pipeline that uses the Package publish profile.
-
-AppVeyor:
-
-* An example [appveyor.xml](https://github.com/muso31/Helixbase/blob/master/appveyor.yml) is included which builds, tests, and packages the solution.
-
-## Legacy Versions
-Legacy versions of Helix Base which are no longer updated or maintained can be found below:
-
-[Helix Base 10.0.1](https://github.com/muso31/Helixbase/tree/feature/10.0.1) (updated until 26/02/2021)  
-[Helix Base 10.0.0](https://github.com/muso31/Helixbase/tree/feature/10.0.0) (updated until 11/01/2021)  
-[Helix Base 10.0.0 None SDK project format](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj) (updated until 11/01/2021)  
-[Helix Base 9.3.0](https://github.com/muso31/Helixbase/tree/feature/9.3.0) (updated until 30/08/2020)  
-[Helix Base 9.3.0 None SDK project format](https://github.com/muso31/Helixbase/tree/feature/9.3.0-old-csproj) (updated until 30/08/2020)  
-[Helix Base 9.2.0](https://github.com/muso31/Helixbase/tree/feature/9.2.0) (updated until 29/11/2019)  
-[Helix Base 9.1.0](https://github.com/muso31/Helixbase/tree/feature/9.1.0) (updated until 08/08/2019)  
-[Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)  
-
-## Extensions
-A repository now exists for Helix Base compatible modules:
-
-[Helix Base modules](https://github.com/muso31/Helixbase-modules)
+⟹ [Replace this Video link](#video-link)
 
 
-## Collaborators
-Special mention to those who collaborate on the project:
 
-[Richard Szalay](https://github.com/richardszalay)  
-[Steve McGill](https://github.com/steviemcg)
+## Pre-requisites and Dependencies
+
+- Sitecore 10.1 installed with SXA.
+- Sitecore PowerShell Extensions (SPE).
+
+## Installation instructions
+⟹ Write a short clear step-wise instruction on how to install your module.  
+
+> _A simple well-described installation process is required to win the Hackathon._  
+> Feel free to use any of the following tools/formats as part of the installation:
+> - Sitecore Package files
+> - Docker image builds
+> - Sitecore CLI
+> - msbuild
+> - npm / yarn
+> 
+> _Do not use_
+> - TDS
+> - Unicorn
+ 
+f. ex. 
+
+1. Start docker environment using `.\Start-Hackathon.ps1`
+2. Open solution in Visual Studio and run build
+3. Use the Sitecore Installation wizard to install the [package](#link-to-package)
+4. ...
+5. profit
+
+### Configuration
+⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
+
+_Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
+
+## Usage instructions
+⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
+
+Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+
+![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
+
+You can embed images of different formats too:
+
+![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
+
+And you can embed external images too:
+
+![Random](https://thiscatdoesnotexist.com/)
+
+## Comments
+If you'd like to make additional comments that is important for your module entry.
