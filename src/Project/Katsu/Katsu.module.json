@@ -2,59 +2,18 @@
     "namespace": "Project.Katsu",
     "references": [
         "Foundation.*",
-        "Feature.*",
-        "Project.Common"
+        "Feature.*"
     ],
     "items": {
         "includes": [
             {
-                "name": "Templates",
-                "path": "/sitecore/templates/Project/Katsu",
+                "name": "New-Marketplace-Tenant",
+                "path": "/sitecore/system/Modules/PowerShell/Script Library/SXA/SXA - Scaffolding/Functions/Scaffolding/Tenant/New-Marketplace-Tenant",
                 "database": "master"
             },
             {
-                "name": "Renderings",
-                "path": "/sitecore/layout/renderings/Project/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Layouts",
-                "path": "/sitecore/layout/layouts/Project/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "PlaceholderSettings",
-                "path": "/sitecore/layout/placeholder settings/Project/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Models",
-                "path": "/sitecore/layout/models/Project/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Content",
-                "path": "/sitecore/content/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Media",
-                "path": "/sitecore/media library/Project/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Profiling",
-                "path": "/sitecore/system/Marketing Control Panel/Profiles/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Outcomes",
-                "path": "/sitecore/system/Marketing Control Panel/Outcomes/Katsu",
-                "database": "master"
-            },
-            {
-                "name": "Campaigns",
-                "path": "/sitecore/system/Marketing Control Panel/Campaigns/Katsu",
+                "name": "Marketplace Tenant",
+                "path": "/sitecore/system/Modules/PowerShell/Script Library/SXA/SXA - Scaffolding/Content Editor/Insert Item/Marketplace Tenant",
                 "database": "master"
             }
         ]
