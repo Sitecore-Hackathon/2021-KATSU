@@ -5,24 +5,6 @@
   "items": {
     "includes": [
       {
-        "name": "Settings.Feature",
-        "path": "/sitecore/system/Settings/Feature",
-        "database": "master",
-        "scope": "SingleItem"
-      },
-      {
-        "name": "Settings.Foundation",
-        "path": "/sitecore/system/Settings/Foundation",
-        "database": "master",
-        "scope": "SingleItem"
-      },
-      {
-        "name": "Settings.Project",
-        "path": "/sitecore/system/Settings/Project",
-        "database": "master",
-        "scope": "SingleItem"
-      },
-      {
         "name": "Media.Feature",
         "path": "/sitecore/media library/Feature",
         "database": "master",
@@ -37,21 +19,21 @@
       {
         "name": "Templates.Feature",
         "path": "/sitecore/templates/Feature",
-        "database": "core",
+        "database": "master",
         "scope": "SingleItem"
       },
-      {
-        "name": "Templates.Foundation",
-        "path": "/sitecore/templates/Foundation",
-        "database": "core",
-        "scope": "SingleItem"
-      },
-      {
-        "name": "Templates.Project",
-        "path": "/sitecore/templates/Project",
-        "database": "core",
-        "scope": "SingleItem"
-      },
+        {
+            "name": "Templates.Foundation",
+            "path": "/sitecore/templates/Foundation",
+            "database": "master",
+            "scope": "SingleItem"
+        },
+        {
+            "name": "Templates.Project",
+            "path": "/sitecore/templates/Project",
+            "database": "master",
+            "scope": "SingleItem"
+        },
       {
         "name": "ExpButtons.Feature",
         "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature",

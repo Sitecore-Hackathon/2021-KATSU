@@ -1,0 +1,99 @@
+﻿---
+ID: "afc8c16b-b679-4d4f-8b00-45b482505cdc"
+Parent: "14e40e94-118e-45f9-9a6c-ce969678bb2e"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: "/sitecore/system/Modules/PowerShell/Script Library/SXA/SXA - Scaffolding/Functions/Scaffolding/Tenant/New-Marketplace-Tenant"
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function Add-BaseTemplate
+    Import-Function Add-FolderStructure
+    Import-Function Get-TenantItem
+    Import-Function Get-OrderedDictionaryByKey
+    Import-Function Get-Action
+    Import-Function Get-TenantDefinition
+    Import-Function Get-TenantThemesFolder
+    Import-Function Get-TenantMediaLibraryRoot
+    Import-Function Invoke-InputValidationStep
+    Import-Function Invoke-PostSetupStep
+    
+    function Show-NewMarketplaceTenantDialog {
+        [CmdletBinding()]
+        param(
+            [Parameter(Mandatory = $true, Position = 0 )]
+            [Item]$TenantLocation
+        )
+    
+        begin {
+            Write-Verbose "Cmdlet Show-NewTenantDialog - Begin"
+        }
+    
+    	process {
+    		
+    		$siteTemplates = @{
+    			"Blogs Site"="C:\inetpub\wwwroot\katsu-sc.dev.local\App_Data\packages\KATSU-News-final.zip|KATSU"
+    		}
+    		
+    		$parameters = @()
+    		$parameters += @{ Name = "siteName"; Title = [Sitecore.Globalization.Translate]::Text([Sitecore.XA.Foundation.Scaffolding.Texts]::SiteName); Tab = [Sitecore.Globalization.Translate]::Text([Katsu.Foundation.Scaffolding.Texts]::Marketplace) }
+    		$parameters += @{ Name = "siteTemplate"; Options = $siteTemplates; Title = [Sitecore.Globalization.Translate]::Text("SiteTemplate"); Tab = [Sitecore.Globalization.Translate]::Text([Katsu.Foundation.Scaffolding.Texts]::Marketplace) }
+    		$result = Read-Variable -Title "Choose option" -Description "Choose the right option." -Width 500 -Height 600 -Parameters $parameters
+    
+    		$selectedSiteTemplate = $siteTemplate.Split('|')[0]
+    		$tenantName = $siteTemplate.Split('|')[1]
+    		
+            if ($result -ne "ok") {
+                Close-Window
+                Exit
+            }
+    		
+    		Install-Package -Path $selectedSiteTemplate -InstallMode Merge -MergeMode Merge
+    		$path = -join("master:\sitecore\content\", $tenantName)
+    		$tenantItem =  Get-Item -Path $path
+    		Rename-Site $tenantItem $siteName
+        }
+    
+        end {
+            Write-Verbose "Cmdlet Show-NewTenantDialog - End"
+        }
+    }
+    
+    function Rename-Site($item, [string] $siteName) {
+    
+        $themesItem =  Get-Item -Path "master:\sitecore\media library\Themes"
+        $mediaLibraryItem =  Get-Item -Path "master:\sitecore\media library\Project"
+    
+        $tenantThemeItem = Get-ChildItem -Item $themesItem | Where-Object { $_.Name -eq $item.Name}
+        $tenantMediaFolder = Get-ChildItem -Item $mediaLibraryItem | Where-Object { $_.Name -eq $item.Name}
+    
+        $allItems = Get-ChildItem -Path $item.FullPath -Recurse| Where-Object { $_.Name -eq "$name"}
+        
+        $allItems += Get-ChildItem -Item $tenantThemeItem -Recurse| Where-Object { $_.Name -eq "$name"}
+        $allItems += Get-ChildItem -Item $tenantMediaFolder -Recurse| Where-Object { $_.Name -eq "$name"}	    
+        $allItems += $item	
+    		
+        ForEach ($siteItem in $allItems) {
+    		$siteItem.Editing.BeginEdit()
+    		$siteItem.Name = $siteName
+    		$siteItem.Editing.EndEdit()    
+        }
+    }
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160627T082448Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0d914ce9-7fdc-468e-8858-7b2165b011fd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T163503Z

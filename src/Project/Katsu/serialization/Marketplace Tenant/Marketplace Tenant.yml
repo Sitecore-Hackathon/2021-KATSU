@@ -1,0 +1,72 @@
+﻿---
+ID: "a59bbfcb-41e4-498f-81c0-e93916ac843a"
+Parent: "7bfc37a7-7817-48a4-afea-b4c1c631b93a"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: "/sitecore/system/Modules/PowerShell/Script Library/SXA/SXA - Scaffolding/Content Editor/Insert Item/Marketplace Tenant"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/office_building2.png
+- ID: "1c76313e-3c8c-4807-a826-135d10c39299"
+  Hint: ShowRule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{DAE13055-7E1B-412A-9426-B6EAD4779449}">
+        <conditions>
+          <condition
+            id="{4F5389E9-79B7-4FE1-A43A-EEA4ECD19C94}"
+            uid="299F74B6058B4A6CA644734379EB8362"
+            operatorid="{10537C58-1684-4CAB-B4C0-40C10907CE31}"
+            value="{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}" />
+        </conditions>
+      </rule>
+      <rule
+        uid="{57C5E9DB-ADE4-4407-9FF3-C00DDA83653E}">
+        <conditions>
+          <condition
+            id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+            uid="F16715E9FE474A0287C596ACEECF3779"
+            templateid="{4F539F2E-9CF9-4453-8E82-3D13DED12AB3}" />
+        </conditions>
+      </rule>
+    </ruleset>
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function Validate-PowerShell
+    
+    Test-PowerShell
+    
+    Try
+    {
+        $ctx = gi .
+        Import-Function New-Marketplace-Tenant
+        
+        $model = Show-NewMarketplaceTenantDialog $ctx    
+    }
+    Catch
+    {
+        $ErrorRecord=$Error[0]
+        Write-Log -Log Error $ErrorRecord
+        Show-Alert "Something went wrong. See SPE logs for more details."
+        Close-Window
+    }
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160628T084423Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8df9bb36-50b5-495d-85e6-2982749b3e69"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T153033Z
