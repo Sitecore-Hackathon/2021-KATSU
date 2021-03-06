@@ -17,8 +17,13 @@
                 "database": "master"
             },
             {
+                "name": "MarketPlace",
+                "path": "/sitecore/content/Applications/MarketPlace",
+                "database": "core"
+            },
+            {
                 "name": "Sites Browser",
-                "path": "/sitecore/layout/Layouts/Media/Site browser",
+                "path": "/sitecore/layout/Layouts/Media/Sites Browser",
                 "database": "core"
             }
         ]

@@ -1,0 +1,33 @@
+﻿---
+ID: "45bdece3-2b7c-47cf-a2ff-df06c07227a4"
+Parent: "c74ac643-53c8-4f1e-9508-840cdc72aaca"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Applications/MarketPlace
+BranchID: "73c2385c-9a34-4125-9419-f64376b34a62"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {1F0770EA-8B77-4110-91AA-CC00DEE102DD}
+    {73C2385C-9A34-4125-9419-F64376B34A62}
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{15BD4F9C-A6D7-4FED-BE83-9466C94769C4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210306T225117Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fe3fd845-d25e-426e-a452-5305b01ad55f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T225117Z
