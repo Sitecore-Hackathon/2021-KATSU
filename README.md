@@ -17,9 +17,8 @@ This solution tries to enhance SXA by enabling the content editors and the marke
  [Documentation File](docs/README.md) 
 
  # Module Package
- [Katsu.SXA.Marketplace](package/Katsu.SXA.Marketplace.zip)
+ [Katsu.SXA.Marketplace](package/Katsu.SXA.Marketplace.zip?raw=true)
 
-## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
+# Video
 
-⟹ [Replace this Video link](#video-link)
+[![SXA Site Marketplace](https://img.youtube.com/vi/OY1mW6ScoF8/0.jpg)](https://www.youtube.com/watch?v=OY1mW6ScoF8)

@@ -16,7 +16,7 @@ for the sake of keeping within the timeline the sites now includes the Tenant wh
 3. Sitecore.PowerShell.Extensions-6.2
 
 # Installing the module 
-On the **Sitecore Launchpad**, click **Control Panel**, **Install a package**. Then follow the Installation Wizard to install the [Katsu.SXA.Marketplace](../package/Katsu.SXA.Marketplace.zip) package file
+On the **Sitecore Launchpad**, click **Control Panel**, **Install a package**. Then follow the Installation Wizard to install the [Katsu.SXA.Marketplace](../package/Katsu.SXA.Marketplace.zip?raw=true) package file
 
 # Using the module
 1. From the content editor , right click on content, insert, Marketplace Tenant
@@ -31,3 +31,5 @@ On the **Sitecore Launchpad**, click **Control Panel**, **Install a package**. T
 ![Step 6](images/6.png?raw=true "Step 6")
 
 # Video
+
+[![SXA Site Marketplace](https://img.youtube.com/vi/OY1mW6ScoF8/0.jpg)](https://www.youtube.com/watch?v=OY1mW6ScoF8)
