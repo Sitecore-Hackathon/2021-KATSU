@@ -10,17 +10,19 @@ for the sake of keeping within the timeline the sites now includes the Tenant wh
 
 # Module Perquisites   
 1. Sitecore 10.1
+  a. instance name must be (katsu-sc.dev.local)
+  b. instance path must be (C:\inetpub\wwwroot\Katsu-sc.dev.local) 
 2. Sitecore Experience Accelerator 10.1
 3. Sitecore.PowerShell.Extensions-6.2
 
 # Installing the module 
-On the **Sitecore Launchpad**, click **Control Panel**, **Install a package**. Then follow the Installation Wizard to install the `Katsu.SXA.Marketplace` package file
+On the **Sitecore Launchpad**, click **Control Panel**, **Install a package**. Then follow the Installation Wizard to install the [Katsu.SXA.Marketplace](../package/Katsu.SXA.Marketplace.zip) package file
 
 # Using the module
 1. From the content editor , right click on content, insert, Marketplace Tenant
 ![Step 1](images/1.png?raw=true "Step 1")
 2. Fill the new Site name and pick the template
-![Step 2](images/2png?raw=true "Step 2")
+![Step 2](images/2.png?raw=true "Step 2")
 3. Wait for the scripts to finish executing 
 ![Step 3](images/3.png?raw=true "Step 3")
 ![Step 4](images/4.png?raw=true "Step 4")
